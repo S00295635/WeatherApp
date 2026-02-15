@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection;
+using System.Security.RightsManagement;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,26 +20,46 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Text.Json;
-using System.Security.RightsManagement;
 
 namespace WeatherApp
 {
+
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static CultureInfo cultureInfo = new CultureInfo("en-IE"); // because my pc is french so it causes errors while parsing (the decimal separator is a , in french not a .)
+
+        private static string workDir = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+
+        public static string contentDir = !workDir.EndsWith("Debug") ? workDir + "Content" : workDir + "\\..\\..\\Content";
+
+        public static Dictionary<string, ImageSource> imageDict = new Dictionary<string, ImageSource> 
+        { 
+            { "suny", new BitmapImage(new Uri($"{contentDir}/suny.jpg"))},
+            { "cloudy", new BitmapImage(new Uri($"{contentDir}/cloudy.png"))},
+            { "rainy", new BitmapImage(new Uri($"{contentDir}/rainy.png"))},
+        };
+
         public MainWindow()
         {
             InitializeComponent();
-
             var client = new HttpClient();
-            var foo = Task.Run(async () => await Weather.getWeather(client));
+            var foo = Task.Run(async () => await Weather.getWeather(client)); // runs an async task in a sync function
             foo.Wait();
             Weather weather = foo.Result;
 
-            H1Time.Text = weather.temperature[0].ToString();
+            DataContext = weather;
+            weather.addAll();
+        }
+
+        private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            ScrollViewer scv = (ScrollViewer)sender;
+            scv.ScrollToHorizontalOffset(scv.HorizontalOffset - e.Delta);
+            e.Handled = true;
         }
     }
 
@@ -84,7 +109,7 @@ namespace WeatherApp
             float[] temps = new float[rawData.Count];
             for (int i = 0; i < rawData.Count; i++)
             {
-                temps[i] = float.Parse($"{rawData[i]}");
+                if (!float.TryParse($"{rawData[i]}", NumberStyles.Float, MainWindow.cultureInfo, out temps[i])) temps[i] = float.NaN;
             }
 
             return temps;
@@ -96,7 +121,7 @@ namespace WeatherApp
             float[] preci = new float[rawData.Count];
             for (int i = 0; i < rawData.Count; i++)
             {
-                preci[i] = float.Parse($"{rawData[i]}");
+                if (!float.TryParse($"{rawData[i]}", NumberStyles.Float, MainWindow.cultureInfo, out preci[i])) preci[i] = float.NaN;
             }
 
             return preci;
@@ -108,7 +133,7 @@ namespace WeatherApp
             float[] probas = new float[rawData.Count];
             for (int i = 0; i < rawData.Count; i++)
             {
-                probas[i] = float.Parse($"{rawData[i]}");
+                if (!float.TryParse($"{rawData[i]}", NumberStyles.Float, MainWindow.cultureInfo, out probas[i])) probas[i] = float.NaN;
             }
 
             return probas;
@@ -120,7 +145,7 @@ namespace WeatherApp
             float[] windSp = new float[rawData.Count];
             for (int i = 0; i < rawData.Count; i++)
             {
-                windSp[i] = float.Parse($"{rawData[i]}");
+                if (!float.TryParse($"{rawData[i]}", NumberStyles.Float, MainWindow.cultureInfo, out windSp[i])) windSp[i] = float.NaN;
             }
 
             return windSp;
@@ -132,10 +157,60 @@ namespace WeatherApp
             float[] cover = new float[rawData.Count];
             for (int i = 0; i < rawData.Count; i++)
             {
-                cover[i] = float.Parse($"{rawData[i]}");
+                if (!float.TryParse($"{rawData[i]}", NumberStyles.Float, MainWindow.cultureInfo, out cover[i])) cover[i] = float.NaN;
             }
 
             return cover;
+        }
+    }
+
+    public class HourlyWeather
+    {
+        public DateTime time;
+
+        public string timeString { get
+            {
+                return $"{time.Hour}:{time.Minute}";
+            } 
+        }
+
+        public ImageSource image { get
+            {
+                if (rainProbability > .75 && precipitation > .5)
+                {
+                    return MainWindow.imageDict["rainy"];
+                }
+                if (cloudCover > .25)
+                {
+                    return MainWindow.imageDict["cloudy"];
+                }
+
+                return MainWindow.imageDict["suny"];
+            }
+        }
+
+        public float temperature { get; }
+        public float precipitation;
+        public float rainProbability;
+        public float cloudCover;
+        public float windSpeeds;
+        public Dictionary<string, string> units;
+
+        public HourlyWeather(DateTime time,
+            float temperature,
+            float precipitation,
+            float rainProbability,
+            float cloudCover,
+            float windSpeeds,
+            Dictionary<string, string> units)
+        {
+            this.time = time;
+            this.temperature = temperature;
+            this.precipitation = precipitation;
+            this.rainProbability = rainProbability;
+            this.cloudCover = cloudCover;
+            this.windSpeeds = windSpeeds;
+            this.units = units;
         }
     }
 
@@ -149,6 +224,13 @@ namespace WeatherApp
         public float[] cloudCover;
         public float[] windSpeeds;
         public Dictionary<string, string> units;
+
+        private ObservableCollection<HourlyWeather> _AllHourlyWeathers = new ObservableCollection<HourlyWeather>();
+        public ObservableCollection<HourlyWeather> AllHourlyWeathers { get
+            {
+                return _AllHourlyWeathers;
+            }
+        }
 
         public async static Task<Weather> getWeather(HttpClient client)
         {
@@ -187,8 +269,33 @@ namespace WeatherApp
 
         public string getTime(int index)
         {
-            DateTime date = time[0];
+            if (index < 0 || index >= length) return "";
+
+            DateTime date = time[index];
             return $"{date.Hour}:{date.Minute}";
+        }
+
+        public void addHourlyWeather(int index)
+        {
+            _AllHourlyWeathers.Add(new HourlyWeather(time[index],
+                temperature[index],
+                precipitation[index],
+                rainProbability[index],
+                cloudCover[index],
+                windSpeeds[index],
+                units));
+        }
+
+        public void addAll(int start = 0)
+        {
+            DateTime now = DateTime.Now;
+            DateTime min = now - new TimeSpan(1, 0, 0);
+
+            for (int i = start; i < length; i++)
+            {
+                if (time[i] >= min)
+                    addHourlyWeather(i);
+            }
         }
     }
 }
