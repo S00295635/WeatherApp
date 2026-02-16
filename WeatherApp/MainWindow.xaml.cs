@@ -17,13 +17,37 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using FileHelpers;
+
 namespace WeatherApp
 {
-
+    [IgnoreFirst]
+    [DelimitedRecord(",")]
+    public class City
+    {
+        public int id;
+        public string name;
+        public int state_id;
+        public string state_code;
+        public string state_nane;
+        public int country_id;
+        public string country_code;
+        public string country_name;
+        public float latitude;
+        public float longitude;
+        public string native;
+        public string type;
+        public string level;
+        public int parent_id;
+        public int population;
+        public string timezone;
+        public string wikiId;
+    }
     
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -32,15 +56,11 @@ namespace WeatherApp
     {
         public static CultureInfo cultureInfo = new CultureInfo("en-IE"); // because my pc is french so it causes errors while parsing (the decimal separator is a , in french not a .)
 
-        private static string workDir = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-
-        public static string contentDir = !workDir.EndsWith("Debug") ? workDir + "Content" : workDir + "\\..\\..\\Content";
-
         public static Dictionary<string, ImageSource> imageDict = new Dictionary<string, ImageSource> 
         { 
-            { "suny", new BitmapImage(new Uri($"{contentDir}/suny.jpg"))},
-            { "cloudy", new BitmapImage(new Uri($"{contentDir}/cloudy.png"))},
-            { "rainy", new BitmapImage(new Uri($"{contentDir}/rainy.png"))},
+            { "suny", new BitmapImage(new Uri($"Content/suny.jpg", UriKind.Relative))},
+            { "cloudy", new BitmapImage(new Uri($"Content/cloudy.png", UriKind.Relative))},
+            { "rainy", new BitmapImage(new Uri($"Content/rainy.png", UriKind.Relative))},
         };
 
         public MainWindow()
@@ -55,11 +75,31 @@ namespace WeatherApp
             weather.addAll();
         }
 
+        private List<City> loadCSV(string filename)
+        {
+            var engine = new FileHelperEngine<City>();
+            var cities = engine.ReadFile("cities.csv");
+
+            return cities.ToList();
+        }
+
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             ScrollViewer scv = (ScrollViewer)sender;
             scv.ScrollToHorizontalOffset(scv.HorizontalOffset - e.Delta);
             e.Handled = true;
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape) {
+                Close();
+            }
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SearchBarTB.Text = (string)((ListBoxItem)((ListBox)e.Source).SelectedValue).Content;
         }
     }
 
@@ -164,13 +204,24 @@ namespace WeatherApp
         }
     }
 
+    public class HalfDayWeather
+    {
+
+    }
+
     public class HourlyWeather
     {
         public DateTime time;
 
         public string timeString { get
             {
-                return $"{time.Hour}:{time.Minute}";
+                return $"{time.Hour:00}:{time.Minute:00}";
+            } 
+        }
+
+        public string temperatureString { get
+            {
+                return $"{temperature}{units["temperature_2m"]}";
             } 
         }
 
@@ -189,7 +240,7 @@ namespace WeatherApp
             }
         }
 
-        public float temperature { get; }
+        public float temperature;
         public float precipitation;
         public float rainProbability;
         public float cloudCover;

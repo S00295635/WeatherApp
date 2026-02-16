@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Background="LightSteelBlue" KeyDown="Window_KeyDown">
     <Window.Resources>
         <DataTemplate x:Key="HourlyTemplate">
             <Grid HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="58">
                 <TextBlock Text="{Binding timeString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center"/>
-                <TextBlock Text="{Binding temperature}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center" Margin="0,49,0,0"/>
+                <TextBlock Text="{Binding temperatureString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center" Margin="0,49,0,0"/>
                 <Image Source="{Binding image}" Height="33" Margin="0,16,0,0" VerticalAlignment="Top"/>
             </Grid>
         </DataTemplate>
     </Window.Resources>
 
     <Grid ScrollViewer.CanContentScroll="True">
-        <TextBox x:Name="SearchBar" HorizontalAlignment="Center" Height="24" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="570" Text="Search"/>
         <Grid HorizontalAlignment="Left" Height="164" Margin="41,53,0,0" VerticalAlignment="Top" Width="172">
             <Image x:Name="MorningImage" Margin="5,5,0,0" HorizontalAlignment="Left" Width="72" Height="68" VerticalAlignment="Top"/>
             <Image x:Name="AfternoonImage" Margin="0,5,5,0" HorizontalAlignment="Right" Width="72" Height="68" VerticalAlignment="Top"/>
@@ -34,5 +34,35 @@
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </ScrollViewer>
+        <!--- > Search bar <-->
+        <StackPanel Margin="127,11,177,307">
+        <Popup Width="{Binding PlacementTarget.ActualWidth, RelativeSource={RelativeSource Mode=Self}}"
+          Placement="Bottom"
+          PlacementTarget="{Binding ElementName=SearchBarTB}">
+                <Popup.Style>
+                    <Style TargetType="{x:Type Popup}">
+                        <Setter Property="IsOpen"
+                            Value="False" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsFocused, ElementName=SearchBarTB}"
+                                Value="True">
+                                <Setter Property="IsOpen"
+                                    Value="True" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding IsFocused, ElementName=SearchBarTB}"
+                                Value="False">
+                                <Setter Property="IsOpen"
+                                    Value="False" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Popup.Style>
+                <ListBox SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem Content="A" />
+                    <ListBoxItem Content="B" />
+                </ListBox>
+            </Popup>
+            <TextBox x:Name="SearchBarTB" />
+        </StackPanel>
     </Grid>
 </Window>
