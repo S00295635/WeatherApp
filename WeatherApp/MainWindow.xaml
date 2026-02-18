@@ -18,7 +18,7 @@
         </DataTemplate>
         <DataTemplate x:Key="halfDayTemplate">
             <Grid>
-                <Image x:Name="MorningImage" Source="/Content/suny.jpg" Margin="5,5,0,0" HorizontalAlignment="Left" Width="72" Height="68" VerticalAlignment="Top"/>
+                <Image x:Name="MorningImage" Source="{Binding image}" Margin="5,5,0,0" HorizontalAlignment="Left" Width="72" Height="68" VerticalAlignment="Top"/>
                 <TextBlock Margin="4,82,0,0" TextWrapping="Wrap" Text="{Binding minTempStr}" HorizontalAlignment="Left" Width="72" Height="13" VerticalAlignment="Top"/>
                 <TextBlock Margin="4,98,0,0" TextWrapping="Wrap" Text="{Binding maxTempStr}" HorizontalAlignment="Left" Width="72" Height="13" VerticalAlignment="Top"/>
             </Grid>
@@ -36,7 +36,7 @@
             </ItemsControl>
         </Grid>
         <TextBlock x:Name="ForecastSummary" Margin="280,53,60,233" TextWrapping="Wrap" Text="TextBlock"/>
-        <ScrollViewer Margin="10,231,10,109" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+        <ScrollViewer Margin="10,247,10,56" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
             <ItemsControl ItemsSource="{Binding AllHourlyWeathers}" ItemTemplate="{StaticResource HourlyTemplate}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>

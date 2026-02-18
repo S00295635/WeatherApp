@@ -81,7 +81,7 @@ namespace WeatherApp {
 
 		private void Window_KeyDown(object sender, KeyEventArgs e) {
 			if (e.Key == Key.Escape) {
-				Close();
+				App.Current.Shutdown();
 			}
 		}
 
@@ -211,7 +211,18 @@ namespace WeatherApp {
 		private float maxTemp;
 		public string maxTempStr => $"max: {maxTemp}{Weather.units["temperature_2m"]}";
 
-		public string temps => $"min: {minTempStr} max: {maxTempStr}";
+		public ImageSource image {
+			get {
+				if (meanRainPb > .75 && meanRain > .5) {
+					return MainWindow.imageDict["rainy"];
+				}
+				if (meanCover > .25) {
+					return MainWindow.imageDict["cloudy"];
+				}
+
+				return MainWindow.imageDict["suny"];
+			}
+		}
 
 		public HalfDayWeather(List<HourlyWeather> today, int MorE) {
 			this.today = today;
@@ -240,7 +251,6 @@ namespace WeatherApp {
 
 		public ImageSource image {
 			get {
-				// throw new Exception();
 				if (rainProbability > .75 && precipitation > .5) {
 					return MainWindow.imageDict["rainy"];
 				}
