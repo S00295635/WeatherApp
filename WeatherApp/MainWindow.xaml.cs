@@ -227,6 +227,7 @@ namespace WeatherApp
 
         public ImageSource image { get
             {
+                // throw new Exception();
                 if (rainProbability > .75 && precipitation > .5)
                 {
                     return MainWindow.imageDict["rainy"];
