@@ -16,14 +16,24 @@
                 <TextBlock Text="{Binding windString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center" Margin="0,59,0,0"/>
             </Grid>
         </DataTemplate>
+        <DataTemplate x:Key="halfDayTemplate">
+            <Grid>
+                <Image x:Name="MorningImage" Source="/Content/suny.jpg" Margin="5,5,0,0" HorizontalAlignment="Left" Width="72" Height="68" VerticalAlignment="Top"/>
+                <TextBlock Margin="4,82,0,0" TextWrapping="Wrap" Text="{Binding minTempStr}" HorizontalAlignment="Left" Width="72" Height="13" VerticalAlignment="Top"/>
+                <TextBlock Margin="4,98,0,0" TextWrapping="Wrap" Text="{Binding maxTempStr}" HorizontalAlignment="Left" Width="72" Height="13" VerticalAlignment="Top"/>
+            </Grid>
+        </DataTemplate>
     </Window.Resources>
 
     <Grid ScrollViewer.CanContentScroll="True">
         <Grid HorizontalAlignment="Left" Height="164" Margin="41,53,0,0" VerticalAlignment="Top" Width="172">
-            <Image x:Name="MorningImage" Margin="5,5,0,0" HorizontalAlignment="Left" Width="72" Height="68" VerticalAlignment="Top"/>
-            <Image x:Name="AfternoonImage" Margin="0,5,5,0" HorizontalAlignment="Right" Width="72" Height="68" VerticalAlignment="Top"/>
-            <TextBlock x:Name="MorningInfo" Margin="4,0,0,0" TextWrapping="Wrap" Text="TextBlock" HorizontalAlignment="Left" Width="82" Height="82" VerticalAlignment="Bottom"/>
-            <TextBlock x:Name="AfternoonInfo" Margin="0,0,4,0" TextWrapping="Wrap" Text="TextBlock" Height="82" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="82"/>
+            <ItemsControl ItemsSource="{Binding halfDayResume}" ItemTemplate="{StaticResource halfDayTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
         </Grid>
         <TextBlock x:Name="ForecastSummary" HorizontalAlignment="Left" Height="148" Margin="280,53,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="460"/>
         <ScrollViewer HorizontalAlignment="Center" Height="94" Margin="0,231,0,0" VerticalAlignment="Top" Width="780" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
@@ -36,8 +46,8 @@
             </ItemsControl>
         </ScrollViewer>
         <!--- > Search bar <-->
-        <StackPanel Margin="127,11,177,307">
-        <Popup Width="{Binding PlacementTarget.ActualWidth, RelativeSource={RelativeSource Mode=Self}}"
+        <StackPanel Margin="152,11,152,307">
+            <Popup Width="{Binding PlacementTarget.ActualWidth, RelativeSource={RelativeSource Mode=Self}}"
           Placement="Bottom"
           PlacementTarget="{Binding ElementName=SearchBarTB}">
                 <Popup.Style>
