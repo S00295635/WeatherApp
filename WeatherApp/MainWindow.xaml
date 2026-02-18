@@ -11,8 +11,9 @@
         <DataTemplate x:Key="HourlyTemplate">
             <Grid HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="58">
                 <TextBlock Text="{Binding timeString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center"/>
-                <TextBlock Text="{Binding temperatureString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center" Margin="0,49,0,0"/>
                 <Image Source="{Binding image}" Height="33" Margin="0,16,0,0" VerticalAlignment="Top"/>
+                <TextBlock Text="{Binding temperatureString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center" Margin="0,49,0,0"/>
+                <TextBlock Text="{Binding windString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center" Margin="0,59,0,0"/>
             </Grid>
         </DataTemplate>
     </Window.Resources>

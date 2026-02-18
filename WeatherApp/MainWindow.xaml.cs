@@ -225,7 +225,13 @@ namespace WeatherApp
             } 
         }
 
-        public ImageSource image { get
+		public string windString {
+			get {
+				return $"{windSpeeds}{units["wind_speed_10m"]}";
+			}
+		}
+
+		public ImageSource image { get
             {
                 // throw new Exception();
                 if (rainProbability > .75 && precipitation > .5)
