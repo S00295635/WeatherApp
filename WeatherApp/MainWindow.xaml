@@ -26,7 +26,7 @@
     </Window.Resources>
 
     <Grid ScrollViewer.CanContentScroll="True">
-        <Grid HorizontalAlignment="Left" Height="164" Margin="41,53,0,0" VerticalAlignment="Top" Width="172">
+        <Grid Margin="36,53,592,217">
             <ItemsControl ItemsSource="{Binding halfDayResume}" ItemTemplate="{StaticResource halfDayTemplate}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -35,8 +35,8 @@
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </Grid>
-        <TextBlock x:Name="ForecastSummary" HorizontalAlignment="Left" Height="148" Margin="280,53,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="460"/>
-        <ScrollViewer HorizontalAlignment="Center" Height="94" Margin="0,231,0,0" VerticalAlignment="Top" Width="780" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+        <TextBlock x:Name="ForecastSummary" Margin="280,53,60,233" TextWrapping="Wrap" Text="TextBlock"/>
+        <ScrollViewer Margin="10,231,10,109" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
             <ItemsControl ItemsSource="{Binding AllHourlyWeathers}" ItemTemplate="{StaticResource HourlyTemplate}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -46,7 +46,7 @@
             </ItemsControl>
         </ScrollViewer>
         <!--- > Search bar <-->
-        <StackPanel Margin="152,11,152,307">
+        <StackPanel Margin="152,11,152,0" Height="116" VerticalAlignment="Top">
             <Popup Width="{Binding PlacementTarget.ActualWidth, RelativeSource={RelativeSource Mode=Self}}"
           Placement="Bottom"
           PlacementTarget="{Binding ElementName=SearchBarTB}">
