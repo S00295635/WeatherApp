@@ -14,6 +14,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using MahApps.Metro.Controls;
 
 namespace WeatherApp {
 	[IgnoreFirst]
@@ -41,7 +42,7 @@ namespace WeatherApp {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window {
+	public partial class MainWindow : MetroWindow {
 		public static CultureInfo cultureInfo = new CultureInfo("en-IE"); // because my pc is french so it causes errors while parsing (the decimal separator is a , in french not a .)
 
 		public static Dictionary<string, ImageSource> imageDict = new Dictionary<string, ImageSource>
