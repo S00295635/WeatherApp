@@ -19,7 +19,7 @@ using MahApps.Metro.Controls;
 namespace WeatherApp {
 	[IgnoreFirst]
 	[DelimitedRecord(",")]
-	public class City {
+	public class RawCity {
 		public int id;
 		public string name;
 		public int state_id;
@@ -33,17 +33,42 @@ namespace WeatherApp {
 		public string native;
 		public string type;
 		public string level;
-		public int parent_id;
-		public int population;
+		public int? parent_id;
+		public int? population;
 		public string timezone;
 		public string wikiId;
+
+		public City toCity() {
+			return new City(id, name, country_name, latitude, longitude);
+		}
+	}
+
+	public class City {
+		public int id;
+		public string name;
+		public string country_name;
+		public string full_name => $"{name}, {country_name}";
+		public float latitude;
+		public float longitude;
+
+		public City(int id, string name, string country_name, float latitude, float longitude) {
+			this.id = id;
+			this.name = name;
+			this.country_name = country_name;
+			this.latitude = latitude;
+			this.longitude = longitude;
+		}
+
+		public override string ToString() => full_name;
 	}
 
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : MetroWindow {
+	public partial class MainWindow : Window {
 		public static CultureInfo cultureInfo = new CultureInfo("en-IE"); // because my pc is french so it causes errors while parsing (the decimal separator is a , in french not a .)
+		public static City sligo = new City(57400, "Sligo", "Ireland", 54.25000000f, -8.66667000f);
+
 
 		public static Dictionary<string, ImageSource> imageDict = new Dictionary<string, ImageSource>
 		{
@@ -52,24 +77,28 @@ namespace WeatherApp {
 			{ "rainy", new BitmapImage(new Uri($"Content/rainy.png", UriKind.Relative))},
 		};
 
+		private HttpClient client = new HttpClient();
+
 		public MainWindow() {
-			
-			var client = new HttpClient();
-			var foo = Task.Run(async () => await Weather.getWeather(client)); // runs an async task in a sync function
+			InitializeComponent();
+
+			var foo = Task.Run(async () => await Weather.getWeather(client, sligo)); // runs an async task in a sync function
 			foo.Wait();
 			Weather weather = foo.Result;
 
 			DataContext = weather;
 			weather.addAll();
 			weather.addHalfResume();
+			weather.removePast();
 
-
-			InitializeComponent();
+			List<RawCity> allCities = loadCSV();
+			IEnumerable<City> cities = allCities.Select(c => c.toCity());
+			SearchBar.ItemsSource = cities.Where(c => c.country_name == "Ireland");
 		}
 
-		private List<City> loadCSV(string filename) {
-			var engine = new FileHelperEngine<City>();
-			var cities = engine.ReadFile("cities.csv");
+		private List<RawCity> loadCSV() {
+			var engine = new FileHelperEngine<RawCity>();
+			var cities = engine.ReadFile("Content/cities.csv");
 
 			return cities.ToList();
 		}
@@ -85,9 +114,22 @@ namespace WeatherApp {
 				App.Current.Shutdown();
 			}
 		}
+		private void ComboBoxAutoComplete_Loaded(object sender, RoutedEventArgs e) {
 
-		private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
-			SearchBarTB.Text = (string)((ListBoxItem)((ListBox)e.Source).SelectedValue).Content;
+		}
+
+		private void SearchBar_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+			AutoCompleteBox box = (AutoCompleteBox)sender;
+			City selected_city = box.SelectedItem as City;
+			if (selected_city != null) {
+				var foo = Task.Run(async () => await Weather.getWeather(client, selected_city)); // runs an async task in a sync function
+				foo.Wait();
+				Weather weather = foo.Result;
+				DataContext = weather;
+				weather.addAll();
+				weather.addHalfResume();
+				weather.removePast();
+			}
 		}
 	}
 
@@ -225,9 +267,9 @@ namespace WeatherApp {
 			}
 		}
 
-		public HalfDayWeather(List<HourlyWeather> today, int MorE) {
+		public HalfDayWeather(List<HourlyWeather> today, bool morning) {
 			this.today = today;
-			IEnumerable<HourlyWeather> set = MorE == 0
+			IEnumerable<HourlyWeather> set = morning
 				? this.today.Where(h => h.time >= startMorning && h.time < endMorning)
 				: this.today.Where(h => h.time >= startEvening && h.time <= endEvening);
 
@@ -295,17 +337,25 @@ namespace WeatherApp {
 		public static Dictionary<string, string> units;
 
 		private ObservableCollection<HourlyWeather> _AllHourlyWeathers = new ObservableCollection<HourlyWeather>();
+		// exposed fields
 		public ObservableCollection<HourlyWeather> AllHourlyWeathers => _AllHourlyWeathers;
-
 		public ObservableCollection<HalfDayWeather> halfDayResume { get; private set; } = new ObservableCollection<HalfDayWeather>();
+		public ObservableCollection<City> Cities { get; private set; } = new ObservableCollection<City>();
 
-		public async static Task<Weather> getWeather(HttpClient client) {
+		public void setCities(IEnumerable<City> cites) {
+			Cities.Clear();
+			foreach (City city in cites) { 
+				Cities.Add(city);
+			}
+		}
+
+		public async static Task<Weather> getWeather(HttpClient client, City city) {
 			string result;
 
 			// Create the HttpContent for the form to be posted.
 			var requestContent = new FormUrlEncodedContent(new[] {
-				new KeyValuePair<string, string>("latitude", "54.2697"),
-				new KeyValuePair<string, string>("longitude", "-8.4694"),
+				new KeyValuePair<string, string>("latitude", city.latitude.ToString(MainWindow.cultureInfo)),
+				new KeyValuePair<string, string>("longitude", city.longitude.ToString(MainWindow.cultureInfo)),
 				new KeyValuePair<string, string>("hourly", "temperature_2m,precipitation,precipitation_probability,cloud_cover,wind_speed_10m"),
 				new KeyValuePair<string, string>("format", "json"),
 			});
@@ -340,7 +390,7 @@ namespace WeatherApp {
 			return $"{date.Hour}:{date.Minute}";
 		}
 
-		public void addHourlyWeather(int index) {
+		private void addHourlyWeather(int index) {
 			_AllHourlyWeathers.Add(new HourlyWeather(time[index],
 				temperature[index],
 				precipitation[index],
@@ -349,13 +399,22 @@ namespace WeatherApp {
 				windSpeeds[index]));
 		}
 
-		public void addAll(int start = 0) {
-			DateTime now = DateTime.Now;
-			DateTime min = now - new TimeSpan(1, 0, 0);
+		public void addAll() {
+			for (int i = 0; i < length; i++) {
+				addHourlyWeather(i);
+			}
+		}
 
-			for (int i = start; i < length; i++) {
-				if (time[i] >= min)
-					addHourlyWeather(i);
+		public void removePast() {
+			DateTime min = DateTime.Now - new TimeSpan(1, 0, 0);
+			for (int i = 0; i < _AllHourlyWeathers.Count; i++) {
+				HourlyWeather w = _AllHourlyWeathers[i];
+				if (w.time < min) {
+					_AllHourlyWeathers.RemoveAt(i);
+					i--;
+				} else {
+					break;
+				}
 			}
 		}
 
@@ -364,8 +423,8 @@ namespace WeatherApp {
 			for (int i = 0; i < 24; i++)
 				today.Add(_AllHourlyWeathers[i]);
 
-			halfDayResume.Add(new HalfDayWeather(today, 0));
-			halfDayResume.Add(new HalfDayWeather(today, 1));
+			halfDayResume.Add(new HalfDayWeather(today, true));
+			halfDayResume.Add(new HalfDayWeather(today, false));
 		}
 	}
 }

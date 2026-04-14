@@ -2832,7 +2832,7 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 5950,"Lake Macquarie Shire",3909,NSW,"New South Wales",14,AU,Australia,-33.03756000,151.53470000,"Lake Macquarie Shire",section,,,3473,Australia/Sydney,Q606193
 5951,"Lake Munmorah",3909,NSW,"New South Wales",14,AU,Australia,-33.19716000,151.58240000,"Lake Munmorah",section,,,5084,Australia/Sydney,Q6477013
 5954,Lakelands,3909,NSW,"New South Wales",14,AU,Australia,-32.96185000,151.64972000,Lakelands,section,,,1445,Australia/Sydney,Q6478846
-5955,Lakemba,3909,NSW,"New South Wales",14,AU,Australia,-33.91972000,151.07592000,"Lakemba,",section,,,17092,Australia/Sydney,Q6271966
+5955,Lakemba,3909,NSW,"New South Wales",14,AU,Australia,-33.91972000,151.07592000,"Lakemba",section,,,17092,Australia/Sydney,Q6271966
 5957,Lakewood,3909,NSW,"New South Wales",14,AU,Australia,-31.63210000,152.75820000,Lakewood,section,,,1249,Australia/Sydney,Q1020987
 5959,"Lalor Park",3909,NSW,"New South Wales",14,AU,Australia,-33.76090000,150.93123000,"Lalor Park",section,,,7637,Australia/Sydney,Q6480572
 5960,Lambton,3909,NSW,"New South Wales",14,AU,Australia,-32.91667000,151.70000000,Lambton,section,,,5214,Australia/Sydney,Q6481586
@@ -3440,7 +3440,7 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 7951,Woronora,3909,NSW,"New South Wales",14,AU,Australia,-34.02436000,151.03862000,Woronora,section,,,2043,Australia/Sydney,Q8036920
 7952,"Woronora Heights",3909,NSW,"New South Wales",14,AU,Australia,-34.03562000,151.02734000,"Woronora Heights",section,,,2781,Australia/Sydney,Q8036922
 7953,Worrigee,3909,NSW,"New South Wales",14,AU,Australia,-34.90000000,150.63333000,Worrigee,city,,,5384,Australia/Sydney,Q8036922
-7954,"Woy Woy",3909,NSW,"New South Wales",14,AU,Australia,-33.48433000,151.32471000,"Woy, woy",section,,,11072,Australia/Sydney,Q8037471
+7954,"Woy Woy",3909,NSW,"New South Wales",14,AU,Australia,-33.48433000,151.32471000,"Woy woy",section,,,11072,Australia/Sydney,Q8037471
 7967,Wyee,3909,NSW,"New South Wales",14,AU,Australia,-33.18252000,151.48804000,Wyee,section,,,2909,Australia/Sydney,Q8039725
 7968,"Wyee Point",3909,NSW,"New South Wales",14,AU,Australia,-33.14585000,151.50783000,"Wyee Point",section,,,1171,Australia/Sydney,Q14935048
 7976,Wyoming,3909,NSW,"New South Wales",14,AU,Australia,-33.40387000,151.36254000,Wyoming,section,,,9927,Australia/Sydney,Q916063
@@ -10095,14 +10095,14 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 10035,Tarija,3378,T,Tarija,27,BO,Bolivia,-21.53549000,-64.72956000,Taria,adm1,,,179528,America/La_Paz,Q35004
 10047,Villamontes,3378,T,Tarija,27,BO,Bolivia,-21.26235000,-63.46903000,Villamontes,city,,,39800,America/La_Paz,Q1014504
 10051,Yacuiba,3378,T,Tarija,27,BO,Bolivia,-22.01643000,-63.67753000,Yacuiba,adm2,,,97296,America/La_Paz,Q990743
-150058,"Boven Bolivia",5086,BQ1,Bonaire,155,BQ,"Bonaire, Sint Eustatius and Saba",12.18190000,-68.21810000,"Boven Bolivia",city,,,,America/Curacao,Q4950521
-150059,"Dorp Tera Kora",5086,BQ1,Bonaire,155,BQ,"Bonaire, Sint Eustatius and Saba",12.13333000,-68.26667000,"Dorp Tera Kora",city,,,1186,America/Kralendijk,Q9357153
-150060,Oranjestad,5086,BQ1,Bonaire,155,BQ,"Bonaire, Sint Eustatius and Saba",17.48333333,-62.98333333,Oranjestad,adm1,,,1097,America/Kralendijk,Q217610
-150061,Rincon,5086,BQ1,Bonaire,155,BQ,"Bonaire, Sint Eustatius and Saba",12.23833333,-68.33250000,Rincon,city,,,1875,America/Kralendijk,Q2033101
-150062,"St. Johns",5086,BQ1,Bonaire,155,BQ,"Bonaire, Sint Eustatius and Saba",17.62100750,-63.24316830,"St. Johns",city,,,,America/Curacao,Q2699576
-150063,"The Bottom",5086,BQ1,Bonaire,155,BQ,"Bonaire, Sint Eustatius and Saba",17.62611111,-63.24916667,"De onderkant",adm1,,,488,America/Kralendijk,Q475718
-150064,Windwardside,5086,BQ1,Bonaire,155,BQ,"Bonaire, Sint Eustatius and Saba",17.62864000,-63.23136000,Windwardside,city,,,,America/Curacao,Q2983401
-150065,"Zion's Hill",5086,BQ1,Bonaire,155,BQ,"Bonaire, Sint Eustatius and Saba",17.64300000,-63.22649000,"Zion's Hill",city,,,2810,America/Kralendijk,Q2511504
+150058,"Boven Bolivia",5086,BQ1,Bonaire,155,BQ,"Bonaire Sint Eustatius and Saba",12.18190000,-68.21810000,"Boven Bolivia",city,,,,America/Curacao,Q4950521
+150059,"Dorp Tera Kora",5086,BQ1,Bonaire,155,BQ,"Bonaire Sint Eustatius and Saba",12.13333000,-68.26667000,"Dorp Tera Kora",city,,,1186,America/Kralendijk,Q9357153
+150060,Oranjestad,5086,BQ1,Bonaire,155,BQ,"Bonaire Sint Eustatius and Saba",17.48333333,-62.98333333,Oranjestad,adm1,,,1097,America/Kralendijk,Q217610
+150061,Rincon,5086,BQ1,Bonaire,155,BQ,"Bonaire Sint Eustatius and Saba",12.23833333,-68.33250000,Rincon,city,,,1875,America/Kralendijk,Q2033101
+150062,"St. Johns",5086,BQ1,Bonaire,155,BQ,"Bonaire Sint Eustatius and Saba",17.62100750,-63.24316830,"St. Johns",city,,,,America/Curacao,Q2699576
+150063,"The Bottom",5086,BQ1,Bonaire,155,BQ,"Bonaire Sint Eustatius and Saba",17.62611111,-63.24916667,"De onderkant",adm1,,,488,America/Kralendijk,Q475718
+150064,Windwardside,5086,BQ1,Bonaire,155,BQ,"Bonaire Sint Eustatius and Saba",17.62864000,-63.23136000,Windwardside,city,,,,America/Curacao,Q2983401
+150065,"Zion's Hill",5086,BQ1,Bonaire,155,BQ,"Bonaire Sint Eustatius and Saba",17.64300000,-63.22649000,"Zion's Hill",city,,,2810,America/Kralendijk,Q2511504
 8233,Brčko,460,BRC,Brčko,28,BA,"Bosnia and Herzegovina",44.86995000,18.81012000,Brčko,adm1,,,39893,Europe/Sarajevo,Q322828
 8230,Brka,460,BRC,Brčko,28,BA,"Bosnia and Herzegovina",44.82837000,18.72420000,Brka,city,,,2800,Europe/Sarajevo,Q911568
 8217,Banovići,467,BIH,"Federation of Bosnia and Herzegovina",28,BA,"Bosnia and Herzegovina",44.40596000,18.52648000,Banovići,adm3,,,7211,Europe/Sarajevo,Q806935
@@ -19225,7 +19225,7 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 159607,Youjiang,2278,GX,Guangxi,45,CN,China,23.97245140,106.50832990,右江,district,2,19303,472086,Asia/Shanghai,
 159550,Yufeng,2278,GX,Guangxi,45,CN,China,24.30515850,109.43567100,玉峰,district,2,19863,668961,Asia/Shanghai,
 20398,Yulin,2278,GX,Guangxi,45,CN,China,22.41991890,110.21431490,榆林,prefecture,1,,0,Asia/Shanghai,Q299247
-159649,"Yulin,",2278,GX,Guangxi,45,CN,China,22.41991890,110.21431490,玉林，,prefecture,1,,,Asia/Shanghai,
+159649,"Yulin",2278,GX,Guangxi,45,CN,China,22.41991890,110.21431490,玉林，,prefecture,1,,,Asia/Shanghai,
 159600,Yuzhou,2278,GX,Guangxi,45,CN,China,22.63146320,110.14617350,禹,district,2,20398,908121,Asia/Shanghai,Q1208465
 159622,Zhaoping,2278,GX,Guangxi,45,CN,China,24.12362000,110.96062000,昭平,county,2,159619,330116,Asia/Shanghai,
 159623,Zhongshan,2278,GX,Guangxi,45,CN,China,24.52846910,111.29893340,中山,county,2,159619,0,Asia/Shanghai,Q59223
@@ -23453,8 +23453,8 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 21274,Quinchía,2879,RIS,Risaralda,48,CO,Colombia,5.33957000,-75.73018000,Quinchía,adm2,,,33318,America/Bogota,Q2433476
 21424,"Santa Rosa de Cabal",2879,RIS,Risaralda,48,CO,Colombia,4.86806000,-75.62139000,"Santa Rosa de Cabal",adm2,,,69960,America/Bogota,Q955068
 21442,Santuario,2879,RIS,Risaralda,48,CO,Colombia,5.05321000,-75.99060000,Santuario,adm2,,,11787,America/Bogota,Q1526270
-21224,Providencia,2900,SAP,"San Andrés, Providencia y Santa Catalina",48,CO,Colombia,12.58231690,-81.69261410,Providencia,city,,,11699,America/Bogota,Q3408299
-21331,"San Andrés",2900,SAP,"San Andrés, Providencia y Santa Catalina",48,CO,Colombia,12.53759790,-81.72041550,"San Andrés",adm1,,,7367,America/Bogota,Q134678
+21224,Providencia,2900,SAP,"San Andrés Providencia y Santa Catalina",48,CO,Colombia,12.58231690,-81.69261410,Providencia,city,,,11699,America/Bogota,Q3408299
+21331,"San Andrés",2900,SAP,"San Andrés Providencia y Santa Catalina",48,CO,Colombia,12.53759790,-81.72041550,"San Andrés",adm1,,,7367,America/Bogota,Q134678
 20493,Aguada,2901,SAN,Santander,48,CO,Colombia,6.16019000,-73.52747000,Aguada,adm2,,,0,America/Bogota,Q1656766
 20497,Albania,2901,SAN,Santander,48,CO,Colombia,5.75894000,-73.91376000,Albania,adm2,,,810,America/Bogota,Q1655535
 20535,Aratoca,2901,SAN,Santander,48,CO,Colombia,6.69432000,-73.01868000,Arathoca,adm2,,,2101,America/Bogota,Q933015
@@ -25825,29 +25825,29 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 23333,Zbůch,4608,324,Plzeň-jih,58,CZ,"Czech Republic",49.67840000,13.22564000,Zbůch,city,,,1890,Europe/Prague,Q168907
 23444,"Železná Ruda",4608,324,Plzeň-jih,58,CZ,"Czech Republic",49.13743000,13.23520000,"Železná Ruda",city,,,2096,Europe/Prague,Q327749
 23450,Žihle,4608,324,Plzeň-jih,58,CZ,"Czech Republic",50.04491000,13.37502000,Žihle,city,,,1419,Europe/Prague,Q2675721
-22162,Braník,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.03498000,14.41518000,Braník,section,,,17777,Europe/Prague,Q2499127
-23376,"Černý Most",4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.10475000,14.57974000,"Černý Most",section,,,22466,Europe/Prague,Q628212
-22290,"Dolní Počernice",4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.08760000,14.57199000,"Dolní Počernice",section,,,2157,Europe/Prague,Q3489932
-22363,Hodkovičky,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.02346000,14.41415000,Hodkovičky,section,,,3956,Europe/Prague,Q2834321
-22387,"Horní Počernice",4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.11210000,14.61036000,"Horní Počernice",section,,,15303,Europe/Prague,Q1481198
-22397,Hostavice,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.09283000,14.55822000,Hostavice,section,,,1729,Europe/Prague,Q3509373
-22499,Karlín,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.09272000,14.44711000,Karlín,section,,,12261,Europe/Prague,Q1734030
-22507,Kbely,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.13333000,14.55000000,Kbely,section,,,7216,Europe/Prague,Q703182
-22600,Letňany,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.13333000,14.51667000,Letňany,section,,,21702,Europe/Prague,Q3497283
-22605,Libeň,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.10819000,14.47457000,Libeň,section,,,36151,Europe/Prague,Q2003486
-22672,"Malá Strana",4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.08774000,14.40449000,"Malá strana",section,,,6350,Europe/Prague,Q753289
-22708,Modřany,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.01116000,14.40960000,Modřany,section,,,33574,Europe/Prague,Q3490542
-22970,Prague,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.08804000,14.42076000,Praha,capital,,,1397880,Europe/Prague,Q1085
-22971,"Praha 1",4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.08802000,14.42166000,"Praha 1",capital,,,1165581,Europe/Prague,Q973974
-22972,"Praha 16",4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",49.98357000,14.36110000,"Praha 16",city,,,,Europe/Prague,Q1987157
-22973,"Praha 20",4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.11568000,14.61122000,"Praha 20",section,,,14296,Europe/Prague,Q23820229
-22974,"Praha 21",4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.07521000,14.66898000,"Praha 21",city,,,,Europe/Prague,Q2467285
-22977,Prosek,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.11525000,14.50685000,Prosek,section,,,16850,Europe/Prague,Q2078708
-23061,Satalice,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.12484000,14.57191000,Satalizace,section,,,2388,Europe/Prague,Q3509354
-23106,"Staré Město",4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.08700000,14.42024000,"Staré Město",section,,,6272,Europe/Prague,Q748211
-23139,Střížkov,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.12674000,14.49363000,Střížkov,section,,,15705,Europe/Prague,Q3499380
-23304,Vysehrad,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.06509000,14.41711000,Vystehrad,section,,,1651,Europe/Prague,Q21891843
-23307,Vysočany,4598,10,"Praha, Hlavní město",58,CZ,"Czech Republic",50.10938000,14.51667000,Vysočany,section,,,17465,Europe/Prague,Q2782104
+22162,Braník,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.03498000,14.41518000,Braník,section,,,17777,Europe/Prague,Q2499127
+23376,"Černý Most",4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.10475000,14.57974000,"Černý Most",section,,,22466,Europe/Prague,Q628212
+22290,"Dolní Počernice",4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.08760000,14.57199000,"Dolní Počernice",section,,,2157,Europe/Prague,Q3489932
+22363,Hodkovičky,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.02346000,14.41415000,Hodkovičky,section,,,3956,Europe/Prague,Q2834321
+22387,"Horní Počernice",4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.11210000,14.61036000,"Horní Počernice",section,,,15303,Europe/Prague,Q1481198
+22397,Hostavice,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.09283000,14.55822000,Hostavice,section,,,1729,Europe/Prague,Q3509373
+22499,Karlín,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.09272000,14.44711000,Karlín,section,,,12261,Europe/Prague,Q1734030
+22507,Kbely,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.13333000,14.55000000,Kbely,section,,,7216,Europe/Prague,Q703182
+22600,Letňany,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.13333000,14.51667000,Letňany,section,,,21702,Europe/Prague,Q3497283
+22605,Libeň,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.10819000,14.47457000,Libeň,section,,,36151,Europe/Prague,Q2003486
+22672,"Malá Strana",4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.08774000,14.40449000,"Malá strana",section,,,6350,Europe/Prague,Q753289
+22708,Modřany,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.01116000,14.40960000,Modřany,section,,,33574,Europe/Prague,Q3490542
+22970,Prague,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.08804000,14.42076000,Praha,capital,,,1397880,Europe/Prague,Q1085
+22971,"Praha 1",4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.08802000,14.42166000,"Praha 1",capital,,,1165581,Europe/Prague,Q973974
+22972,"Praha 16",4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",49.98357000,14.36110000,"Praha 16",city,,,,Europe/Prague,Q1987157
+22973,"Praha 20",4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.11568000,14.61122000,"Praha 20",section,,,14296,Europe/Prague,Q23820229
+22974,"Praha 21",4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.07521000,14.66898000,"Praha 21",city,,,,Europe/Prague,Q2467285
+22977,Prosek,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.11525000,14.50685000,Prosek,section,,,16850,Europe/Prague,Q2078708
+23061,Satalice,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.12484000,14.57191000,Satalizace,section,,,2388,Europe/Prague,Q3509354
+23106,"Staré Město",4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.08700000,14.42024000,"Staré Město",section,,,6272,Europe/Prague,Q748211
+23139,Střížkov,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.12674000,14.49363000,Střížkov,section,,,15705,Europe/Prague,Q3499380
+23304,Vysehrad,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.06509000,14.41711000,Vystehrad,section,,,1651,Europe/Prague,Q21891843
+23307,Vysočany,4598,10,"Praha Hlavní město",58,CZ,"Czech Republic",50.10938000,14.51667000,Vysočany,section,,,17465,Europe/Prague,Q2782104
 22112,"Bakov nad Jizerou",4554,20,"Středočeský kraj",58,CZ,"Czech Republic",50.48230000,14.94149000,"Bakov nad Jizerou",city,,,5355,Europe/Prague,Q804489
 22202,"Bělá pod Bezdězem",4554,20,"Středočeský kraj",58,CZ,"Czech Republic",50.50121000,14.80418000,"Bělá pod Bezdězem",city,,,4804,Europe/Prague,Q1019942
 22124,"Benátky nad Jizerou",4554,20,"Středočeský kraj",58,CZ,"Czech Republic",50.29085000,14.82343000,"Benátky nad Jizerou",city,,,7879,Europe/Prague,Q818540
@@ -27678,27 +27678,27 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 38659,Jijiga,2,SO,Somali,70,ET,Ethiopia,9.35000000,42.80000000,ጩኸት,adm1,,,483000,Africa/Addis_Ababa,Q755763
 38673,"Liben zone",2,SO,Somali,70,ET,Ethiopia,4.75000000,40.50000000,"ሊብን ዞን",city,,,539821,Africa/Addis_Ababa,Q1822845
 38697,"Shinile Zone",2,SO,Somali,70,ET,Ethiopia,10.17097000,41.83748000,"ሺኒን ዞን",city,,,,Africa/Addis_Ababa,Q2279103
-38592,"Alaba Special Wereda",1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,7.45347000,38.21189000,"አላባ ልዩ ወረዳ",city,,,,Africa/Addis_Ababa,Q2829448
-38593,"Arba Minch",1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,6.03333000,37.55000000,አርባምንጭ,city,,,201000,Africa/Addis_Ababa,Q626861
-38725,Āreka,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,7.06667000,37.70000000,አስጨናቂ,city,,,84500,Africa/Addis_Ababa,Q4788771
-38599,Bako,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,5.78333000,36.56667000,እንግዳ,city,,,34100,Africa/Addis_Ababa,Q464699
-38606,Bodītī,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,6.96667000,37.86667000,ቦዲቲ,city,,,64900,Africa/Addis_Ababa,Q965112
-38609,Butajīra,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,8.11667000,38.36667000,ዳኛ,city,,,89800,Africa/Addis_Ababa,Q2928812
-38629,"Felege Neway",1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,6.30000000,36.88333000,"ሾርባ አዲስ",city,,,61000,Africa/Addis_Ababa,Q1109870
-38634,"Gedeo Zone",1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,6.12727000,38.27716000,"ጌዴኦ ዞን",city,,,847434,Africa/Addis_Ababa,Q500213
-38647,Gīdolē,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,5.65000000,37.36667000,"በጊዲ ውስጥ",city,,,35500,Africa/Addis_Ababa,Q3105416
-38645,"Guraghe Zone",1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,8.25000000,38.00000000,"ጉራጌ ዞን",city,,,,Africa/Addis_Ababa,Q1070678
-38648,"Hadiya Zone",1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,7.50000000,37.75000000,"ሃልስ ዞን",city,,,1231196,Africa/Addis_Ababa,Q3125547
-38652,Hosa’ina,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,7.54978000,37.85374000,ሸሚዝ,adm1,,,188200,Africa/Addis_Ababa,Q2754082
-38662,Jinka,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,5.65000000,36.65000000,መስታወት,city,,,54400,Africa/Addis_Ababa,Q3110186
-38670,K’olīto,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,7.31667000,38.08333000,ኮሊቶ,city,,,72200,Africa/Addis_Ababa,Q3198925
-38663,"Kembata Alaba Tembaro Zone",1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,7.27039000,37.77887000,"ለቤተመቅደሱ ዞን የምስክር ወረቀቱን ማረጋገጥ",city,,,,Africa/Addis_Ababa,Q3194972
-38668,Konso,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,5.25000000,37.48333000,ኮንሶን,city,,,4593,Africa/Addis_Ababa,Q575352
-38674,Lobuni,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,4.83333000,36.10000000,"የማዕድን ማውጫ",city,,,3363,Africa/Addis_Ababa,Q1822845
-38700,Sodo,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,6.86000000,37.76159000,"የአትክልት ስፍራ",adm1,,,213467,Africa/Addis_Ababa,Q1070673
-38707,Turmi,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,4.96667000,36.48333000,የድንጋይ,city,,,1087,Africa/Addis_Ababa,Q991408
-38716,"Wolayita Zone",1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,6.84312000,37.70051000,"የወላይታ ዞን",city,,,6142063,Africa/Addis_Ababa,Q8029709
-38718,Yem,1,SN,"Southern Nations, Nationalities, and Peoples",70,ET,Ethiopia,7.83333000,37.50000000,ባይት,city,,,,Africa/Addis_Ababa,Q1067172
+38592,"Alaba Special Wereda",1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,7.45347000,38.21189000,"አላባ ልዩ ወረዳ",city,,,,Africa/Addis_Ababa,Q2829448
+38593,"Arba Minch",1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,6.03333000,37.55000000,አርባምንጭ,city,,,201000,Africa/Addis_Ababa,Q626861
+38725,Āreka,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,7.06667000,37.70000000,አስጨናቂ,city,,,84500,Africa/Addis_Ababa,Q4788771
+38599,Bako,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,5.78333000,36.56667000,እንግዳ,city,,,34100,Africa/Addis_Ababa,Q464699
+38606,Bodītī,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,6.96667000,37.86667000,ቦዲቲ,city,,,64900,Africa/Addis_Ababa,Q965112
+38609,Butajīra,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,8.11667000,38.36667000,ዳኛ,city,,,89800,Africa/Addis_Ababa,Q2928812
+38629,"Felege Neway",1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,6.30000000,36.88333000,"ሾርባ አዲስ",city,,,61000,Africa/Addis_Ababa,Q1109870
+38634,"Gedeo Zone",1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,6.12727000,38.27716000,"ጌዴኦ ዞን",city,,,847434,Africa/Addis_Ababa,Q500213
+38647,Gīdolē,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,5.65000000,37.36667000,"በጊዲ ውስጥ",city,,,35500,Africa/Addis_Ababa,Q3105416
+38645,"Guraghe Zone",1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,8.25000000,38.00000000,"ጉራጌ ዞን",city,,,,Africa/Addis_Ababa,Q1070678
+38648,"Hadiya Zone",1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,7.50000000,37.75000000,"ሃልስ ዞን",city,,,1231196,Africa/Addis_Ababa,Q3125547
+38652,Hosa’ina,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,7.54978000,37.85374000,ሸሚዝ,adm1,,,188200,Africa/Addis_Ababa,Q2754082
+38662,Jinka,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,5.65000000,36.65000000,መስታወት,city,,,54400,Africa/Addis_Ababa,Q3110186
+38670,K’olīto,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,7.31667000,38.08333000,ኮሊቶ,city,,,72200,Africa/Addis_Ababa,Q3198925
+38663,"Kembata Alaba Tembaro Zone",1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,7.27039000,37.77887000,"ለቤተመቅደሱ ዞን የምስክር ወረቀቱን ማረጋገጥ",city,,,,Africa/Addis_Ababa,Q3194972
+38668,Konso,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,5.25000000,37.48333000,ኮንሶን,city,,,4593,Africa/Addis_Ababa,Q575352
+38674,Lobuni,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,4.83333000,36.10000000,"የማዕድን ማውጫ",city,,,3363,Africa/Addis_Ababa,Q1822845
+38700,Sodo,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,6.86000000,37.76159000,"የአትክልት ስፍራ",adm1,,,213467,Africa/Addis_Ababa,Q1070673
+38707,Turmi,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,4.96667000,36.48333000,የድንጋይ,city,,,1087,Africa/Addis_Ababa,Q991408
+38716,"Wolayita Zone",1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,6.84312000,37.70051000,"የወላይታ ዞን",city,,,6142063,Africa/Addis_Ababa,Q8029709
+38718,Yem,1,SN,"Southern Nations Nationalities and Peoples",70,ET,Ethiopia,7.83333000,37.50000000,ባይት,city,,,,Africa/Addis_Ababa,Q1067172
 38603,"Bench Maji Zone",5466,SW,"Southwest Ethiopia Peoples",70,ET,Ethiopia,6.45994000,35.30549000,"የውሃ አቅርቦት",city,,,,Africa/Addis_Ababa,Q2895686
 38607,Bonga,5466,SW,"Southwest Ethiopia Peoples",70,ET,Ethiopia,7.28333000,36.23333000,ማድነቅ,adm1,,,56000,Africa/Addis_Ababa,Q965112
 38683,"Mīzan Teferī",5466,SW,"Southwest Ethiopia Peoples",70,ET,Ethiopia,6.99865000,35.58879000,"በቅጹ ውስጥ ያለው ሞገስ",city,,,62000,Africa/Addis_Ababa,Q3317332
@@ -44078,7 +44078,7 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 24076,Bertsdorf-Hörnitz,3021,SN,Saxony,82,DE,Germany,50.88593000,14.73696000,Bertsdorf-Hörnitz,city,,,2616,Europe/Berlin,Q502461
 24150,Bischofswerda,3021,SN,Saxony,82,DE,Germany,51.12771000,14.17974000,Bischofswerda,city,,,10648,Europe/Berlin,Q81717
 24195,Bockau,3021,SN,Saxony,82,DE,Germany,50.54209000,12.68639000,Bockau,adm4,,,2180,Europe/Berlin,Q57720
-24196,Bockelwitz,3021,SN,Saxony,82,DE,Germany,51.19942000,12.95618000,"Boo -Kopf, Rache",city,,,2794,Europe/Berlin,Q542047
+24196,Bockelwitz,3021,SN,Saxony,82,DE,Germany,51.19942000,12.95618000,"Boo -Kopf Rache",city,,,2794,Europe/Berlin,Q542047
 24466,Böhlen,3021,SN,Saxony,82,DE,Germany,51.20061000,12.38622000,Böhlen,city,,,6931,Europe/Berlin,Q22972
 24250,Borna,3021,SN,Saxony,82,DE,Germany,51.12416000,12.49639000,Borna,adm3,,,20013,Europe/Berlin,Q623947
 24474,Börnichen,3021,SN,Saxony,82,DE,Germany,50.75010000,13.14075000,Börnichen,city,,,959,Europe/Berlin,Q57725
@@ -70910,7 +70910,7 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 67788,Mosta,139,51,"St. Paul's Bay",135,MT,Malta,35.90917000,14.42556000,Pont,adm1,,,25496,Europe/Malta,Q39520
 153739,Qawra,139,51,"St. Paul's Bay",135,MT,Malta,35.95416700,14.42000000,Qawra,city,,,0,Europe/Malta,Q1038990
 67802,"Santa Luċija",139,51,"St. Paul's Bay",135,MT,Malta,36.04306000,14.21722000,"Santa Luċija",city,,,0,Europe/Malta,Q1256169
-67807,"Santa Luċija, Gozo",139,51,"St. Paul's Bay",135,MT,Malta,35.86278000,14.50750000,"Santa Luċija, Gozo",section,,,2954,Europe/Malta,Q20922931
+67807,"Santa Luċija Gozo",139,51,"St. Paul's Bay",135,MT,Malta,35.86278000,14.50750000,"Santa Luċija Gozo",section,,,2954,Europe/Malta,Q20922931
 153743,Wardija,139,51,"St. Paul's Bay",135,MT,Malta,35.93795800,14.39254200,Wardija,city,,,0,Europe/Malta,Q29413612
 153744,Xemxija,139,51,"St. Paul's Bay",135,MT,Malta,35.95055600,14.38583300,Xemxija,adm1,,,0,Europe/Malta,Q570499
 153735,Madliena,86,57,Swieqi,135,MT,Malta,35.93333300,14.46666700,Madliena,adm1,,,3339,Europe/Malta,Q3276140
@@ -96157,7 +96157,7 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 153594,Luquillo,5179,089,Luquillo,178,PR,"Puerto Rico",18.37245070,-65.71655110,Luquillo,adm1,,,8326,America/Puerto_Rico,Q1984618
 153595,Manatí,5180,091,Manatí,178,PR,"Puerto Rico",18.41812150,-66.52627830,Manatí,city,,,,America/Puerto_Rico,Q674599
 153596,Maricao,5181,093,Maricao,178,PR,"Puerto Rico",18.18079020,-66.97990010,Maricao,adm1,,,1172,America/Puerto_Rico,Q2624359
-153597,Maunabo,5182,095,Maunabo,178,PR,"Puerto Rico",18.00718850,-65.89932890,"Maunaloa, establecimiento",adm1,,,2154,America/Puerto_Rico,Q3017679
+153597,Maunabo,5182,095,Maunabo,178,PR,"Puerto Rico",18.00718850,-65.89932890,"Maunaloa establecimiento",adm1,,,2154,America/Puerto_Rico,Q3017679
 153598,Mayagüez,5083,MG,Mayagüez,178,PR,"Puerto Rico",18.20134520,-67.14515490,Mayagüez,adm1,,,,America/Puerto_Rico,Q632727
 153599,Moca,5184,099,Moca,178,PR,"Puerto Rico",18.39679290,-67.14790350,Moca,adm1,,,,America/Puerto_Rico,Q439855
 153600,Morovis,5185,101,Morovis,178,PR,"Puerto Rico",18.32578500,-66.40655920,Morovis,adm1,,,2414,America/Puerto_Rico,Q2623982
@@ -102230,7 +102230,7 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 94681,Iordăcheanu,4729,PH,Prahova,181,RO,Romania,45.04392000,26.23920000,Iordăcheanu,adm2,,,570,Europe/Bucharest,Q14079750
 94712,Izvoarele,4729,PH,Prahova,181,RO,Romania,45.28376000,26.00119000,Izvoarele,adm2,,,2329,Europe/Bucharest,Q1099012
 94752,Jugureni,4729,PH,Prahova,181,RO,Romania,45.10000000,26.45000000,Jigen,adm2,,,730,Europe/Bucharest,Q14089457
-94760,Lapoș,4729,PH,Prahova,181,RO,Romania,45.15197000,26.41911000,"Desigur, este posibil",adm2,,,983,Europe/Bucharest,Q14193660
+94760,Lapoș,4729,PH,Prahova,181,RO,Romania,45.15197000,26.41911000,"Desigur este posibil",adm2,,,983,Europe/Bucharest,Q14193660
 94797,Liliești,4729,PH,Prahova,181,RO,Romania,45.03458000,25.88554000,Liliești,city,,,2204,Europe/Bucharest,Q12119675
 94807,Lipăneşti,4729,PH,Prahova,181,RO,Romania,45.05000000,26.01667000,Lipăneşti,adm2,,,5264,Europe/Bucharest,Q14193673
 94816,Livadea,4729,PH,Prahova,181,RO,Romania,45.18663000,25.92805000,Livadă,city,,,908,Europe/Bucharest,Q12119544
@@ -128641,12 +128641,12 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 50074,"Isle Of Mull",2392,AGB,"Argyll and Bute",232,GB,"United Kingdom",56.44703000,-5.77404000,"Isle Of Mull",city,,,2667,Europe/London,Q2533408
 50796,Oban,2392,AGB,"Argyll and Bute",232,GB,"United Kingdom",56.41535000,-5.47184000,Oban,city,,,8490,Europe/London,Q935702
 51634,Tobermory,2392,AGB,"Argyll and Bute",232,GB,"United Kingdom",56.62198000,-6.07231000,Tobermory,city,,,1010,Europe/London,Q416901
-48277,Armagh,2324,ABC,"Armagh, Banbridge and Craigavon",232,GB,"United Kingdom",54.35000000,-6.66667000,harsh,adm2,,,14777,Europe/London,Q193452
-48278,"Armagh City Banbridge and Craigavon",2324,ABC,"Armagh, Banbridge and Craigavon",232,GB,"United Kingdom",54.36922000,-6.45651000,"Armagh City Banbridge and Craigavon",city,,,,Europe/London,Q193452
-50099,Keady,2324,ABC,"Armagh, Banbridge and Craigavon",232,GB,"United Kingdom",54.25000000,-6.70000000,Keady,city,,,3171,Europe/London,Q1373360
-50644,Moy,2324,ABC,"Armagh, Banbridge and Craigavon",232,GB,"United Kingdom",54.45000000,-6.66667000,Moy,city,,,1234,Europe/London,Q3069486
-50956,Portadown,2324,ABC,"Armagh, Banbridge and Craigavon",232,GB,"United Kingdom",54.42302000,-6.44434000,Portadown,city,,,22000,Europe/London,Q768714
-51553,Tandragee,2324,ABC,"Armagh, Banbridge and Craigavon",232,GB,"United Kingdom",54.35486000,-6.41396000,Tandragee,city,,,3122,Europe/London,Q2018299
+48277,Armagh,2324,ABC,"Armagh Banbridge and Craigavon",232,GB,"United Kingdom",54.35000000,-6.66667000,harsh,adm2,,,14777,Europe/London,Q193452
+48278,"Armagh City Banbridge and Craigavon",2324,ABC,"Armagh Banbridge and Craigavon",232,GB,"United Kingdom",54.36922000,-6.45651000,"Armagh City Banbridge and Craigavon",city,,,,Europe/London,Q193452
+50099,Keady,2324,ABC,"Armagh Banbridge and Craigavon",232,GB,"United Kingdom",54.25000000,-6.70000000,Keady,city,,,3171,Europe/London,Q1373360
+50644,Moy,2324,ABC,"Armagh Banbridge and Craigavon",232,GB,"United Kingdom",54.45000000,-6.66667000,Moy,city,,,1234,Europe/London,Q3069486
+50956,Portadown,2324,ABC,"Armagh Banbridge and Craigavon",232,GB,"United Kingdom",54.42302000,-6.44434000,Portadown,city,,,22000,Europe/London,Q768714
+51553,Tandragee,2324,ABC,"Armagh Banbridge and Craigavon",232,GB,"United Kingdom",54.35486000,-6.41396000,Tandragee,city,,,3122,Europe/London,Q2018299
 48446,Becontree,2356,BDG,"Barking and Dagenham",232,GB,"United Kingdom",51.55290000,0.12900000,Becontree,section,,,100000,Europe/London,Q2568462
 48905,"Chadwell Heath",2356,BDG,"Barking and Dagenham",232,GB,"United Kingdom",51.57121000,0.13271000,"Keep Heath",section,,,9598,Europe/London,Q1058698
 49070,"Collier Row",2356,BDG,"Barking and Dagenham",232,GB,"United Kingdom",51.59893000,0.16600000,"Collier Row",section,,,10100,Europe/London,Q2530698
@@ -128861,32 +128861,32 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 51661,Tredegar,2530,BGW,"Blaenau Gwent",232,GB,"United Kingdom",51.77251000,-3.24679000,Tredegar,city,,,14740,Europe/London,Q1529978
 51717,Victoria,2530,BGW,"Blaenau Gwent",232,GB,"United Kingdom",51.75000000,-3.20000000,Victoria,locality,,,9153,Europe/London,Q1242850
 48480,Berwick-Upon-Tweed,2504,BOL,Bolton,232,GB,"United Kingdom",55.76536000,-2.01186000,Berwick-Upon-Tweed,city,,,11630,Europe/London,Q504678
-48477,"Bere Regis",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.75371000,-2.21553000,"Bere King",city,,,1304,Europe/London,Q1215902
-48561,"Blandford Forum",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.86073000,-2.16174000,"Blandford Forum",city,,,10607,Europe/London,Q644530
-48625,Bournemouth,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.71918000,-1.87806000,Bournemouth,adm2,,,187503,Europe/London,Q20989094
-48630,"Bovington Camp",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.69782000,-2.23506000,"Bovington Camp",city,,,2586,Europe/London,Q4252369
-48713,Broadstone,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.75717000,-1.99406000,Broadstone,city,,,10256,Europe/London,Q2925857
-48844,"Canford Heath",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.75100000,-1.96862000,"Canford Heath",section,,,14418,Europe/London,Q5032320
-48926,"Charlton Marshall",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.83591000,-2.14231000,"Charlton Marshall",city,,,1240,Europe/London,Q2215951
-48966,"Child Okeford",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.91370000,-2.23679000,"Child Okeford",city,,,1170,Europe/London,Q2153905
-48988,Christchurch,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.73583000,-1.78129000,Christchurch,city,,,42396,Europe/London,Q925424
-49105,"Corfe Castle",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.63947000,-2.05672000,"Corfe Castle",city,,,1284,Europe/London,Q13341461
-49547,Ferndown,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.80743000,-1.89975000,Ferndown,city,,,17650,Europe/London,Q1406936
-50455,"Lytchett Matravers",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.75826000,-2.07806000,"Lytchett Matravers",city,,,3570,Europe/London,Q572416
-50637,Motcombe,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",51.02929000,-2.21627000,"The motto",city,,,1014,Europe/London,Q4396605
-50855,Parkstone,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.72994000,-1.94492000,Parkstone,city,,,10779,Europe/London,Q7138722
-50912,Pimperne,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.88374000,-2.13620000,Pimperne,city,,,1080,Europe/London,Q2338136
-50949,Poole,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.73333000,-1.96667000,Poole,city,,,2400,Europe/London,Q21683234
-51244,Shaftesbury,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",51.00528000,-2.19333000,Shaftesbury,city,,,7314,Europe/London,Q631444
-51280,Shillingstone,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.89567000,-2.24495000,Shillingstone,city,,,1165,Europe/London,Q1868437
-51400,"St Leonards",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.83077000,-1.84377000,"St Leonards",city,,,5984,Europe/London,Q7594007
-51505,"Sturminster Marshall",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.79968000,-2.07615000,"Sturminster Marshall",city,,,1490,Europe/London,Q5376089
-51528,Swanage,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.60923000,-1.96260000,Swanage,city,,,9426,Europe/London,Q1009298
-51612,"Three Legged Cross",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.85000000,-1.88333000,"Three Legged Cross",city,,,1492,Europe/London,Q7797574
-51716,Verwood,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.87575000,-1.87023000,Wrecked,city,,,15172,Europe/London,Q1242850
-51749,Wareham,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.68792000,-2.11058000,Wareham,city,,,7592,Europe/London,Q387419
-51917,"Wimborne Minster",5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.78333000,-1.98333000,"Wimborne Minster",city,,,14884,Europe/London,Q535233
-51978,Wool,5459,BCP,"Bournemouth, Christchurch and Poole",232,GB,"United Kingdom",50.67966000,-2.21890000,Wool,city,,,2724,Europe/London,Q1218503
+48477,"Bere Regis",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.75371000,-2.21553000,"Bere King",city,,,1304,Europe/London,Q1215902
+48561,"Blandford Forum",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.86073000,-2.16174000,"Blandford Forum",city,,,10607,Europe/London,Q644530
+48625,Bournemouth,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.71918000,-1.87806000,Bournemouth,adm2,,,187503,Europe/London,Q20989094
+48630,"Bovington Camp",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.69782000,-2.23506000,"Bovington Camp",city,,,2586,Europe/London,Q4252369
+48713,Broadstone,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.75717000,-1.99406000,Broadstone,city,,,10256,Europe/London,Q2925857
+48844,"Canford Heath",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.75100000,-1.96862000,"Canford Heath",section,,,14418,Europe/London,Q5032320
+48926,"Charlton Marshall",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.83591000,-2.14231000,"Charlton Marshall",city,,,1240,Europe/London,Q2215951
+48966,"Child Okeford",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.91370000,-2.23679000,"Child Okeford",city,,,1170,Europe/London,Q2153905
+48988,Christchurch,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.73583000,-1.78129000,Christchurch,city,,,42396,Europe/London,Q925424
+49105,"Corfe Castle",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.63947000,-2.05672000,"Corfe Castle",city,,,1284,Europe/London,Q13341461
+49547,Ferndown,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.80743000,-1.89975000,Ferndown,city,,,17650,Europe/London,Q1406936
+50455,"Lytchett Matravers",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.75826000,-2.07806000,"Lytchett Matravers",city,,,3570,Europe/London,Q572416
+50637,Motcombe,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",51.02929000,-2.21627000,"The motto",city,,,1014,Europe/London,Q4396605
+50855,Parkstone,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.72994000,-1.94492000,Parkstone,city,,,10779,Europe/London,Q7138722
+50912,Pimperne,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.88374000,-2.13620000,Pimperne,city,,,1080,Europe/London,Q2338136
+50949,Poole,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.73333000,-1.96667000,Poole,city,,,2400,Europe/London,Q21683234
+51244,Shaftesbury,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",51.00528000,-2.19333000,Shaftesbury,city,,,7314,Europe/London,Q631444
+51280,Shillingstone,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.89567000,-2.24495000,Shillingstone,city,,,1165,Europe/London,Q1868437
+51400,"St Leonards",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.83077000,-1.84377000,"St Leonards",city,,,5984,Europe/London,Q7594007
+51505,"Sturminster Marshall",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.79968000,-2.07615000,"Sturminster Marshall",city,,,1490,Europe/London,Q5376089
+51528,Swanage,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.60923000,-1.96260000,Swanage,city,,,9426,Europe/London,Q1009298
+51612,"Three Legged Cross",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.85000000,-1.88333000,"Three Legged Cross",city,,,1492,Europe/London,Q7797574
+51716,Verwood,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.87575000,-1.87023000,Wrecked,city,,,15172,Europe/London,Q1242850
+51749,Wareham,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.68792000,-2.11058000,Wareham,city,,,7592,Europe/London,Q387419
+51917,"Wimborne Minster",5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.78333000,-1.98333000,"Wimborne Minster",city,,,14884,Europe/London,Q535233
+51978,Wool,5459,BCP,"Bournemouth Christchurch and Poole",232,GB,"United Kingdom",50.67966000,-2.21890000,Wool,city,,,2724,Europe/London,Q1218503
 48213,Aldershot,2470,BRC,"Bracknell Forest",232,GB,"United Kingdom",51.24827000,-0.76389000,Aldershot,city,,,57211,Europe/London,Q646980
 48284,Ascot,2470,BRC,"Bracknell Forest",232,GB,"United Kingdom",51.41082000,-0.67480000,Ascot,city,,,17899,Europe/London,Q723329
 48336,Bagshot,2470,BRC,"Bracknell Forest",232,GB,"United Kingdom",51.36069000,-0.68802000,Bagshot,city,,,5430,Europe/London,Q4842133
@@ -130749,18 +130749,18 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 50710,"Newcastle upon Tyne",2458,NET,"Newcastle upon Tyne",232,GB,"United Kingdom",55.00000000,-1.66667000,"Newcastle upon Tyne",city,,,300196,Europe/London,Q21012735
 48386,Barking,2418,NWM,Newham,232,GB,"United Kingdom",51.53333000,0.08333000,Barking,city,,,61000,Europe/London,Q377720
 48842,"Canary Wharf",2418,NWM,Newham,232,GB,"United Kingdom",51.50519000,-0.02085000,"Canary Wharf",section,,,73390,Europe/London,Q124377
-48254,Annalong,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.10823000,-5.89966000,Anntallong,city,,,1778,Europe/London,Q60776
-48366,Banbridge,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.35000000,-6.28333000,Banbridge,adm2,,,14744,Europe/London,Q58270
-48887,Castlewellan,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.25690000,-5.94446000,Castlewellan,city,,,2499,Europe/London,Q58126
-49178,Crossmaglen,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.08333000,-6.60000000,Crossmaglen,city,,,1415,Europe/London,Q1838543
-49642,Gilford,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.37256000,-6.36126000,Gilford,city,,,1583,Europe/London,Q2442269
-50145,Kilkeel,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.06196000,-6.00308000,Tale,city,,,6447,Europe/London,Q84109
-50707,Newcastle,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.21804000,-5.88979000,Newcastle,city,,,7444,Europe/London,Q1973774
-50725,Newry,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.17841000,-6.33739000,Newry,adm2,,,27757,Europe/London,Q269980
-50726,"Newry Mourne and Down",2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.23616000,-6.06687000,"Newry Mourne and Down",city,,,,Europe/London,Q269980
-51034,Rathfriland,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.25000000,-6.16667000,Rathfriland,city,,,2063,Europe/London,Q58090
-51113,Rostrevor,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.10000000,-6.20000000,Rostrevor,city,,,2515,Europe/London,Q58134
-51756,Warrenpoint,2534,NMD,"Newry, Mourne and Down",232,GB,"United Kingdom",54.10148000,-6.25731000,Warrenpoint,city,,,6441,Europe/London,Q2224481
+48254,Annalong,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.10823000,-5.89966000,Anntallong,city,,,1778,Europe/London,Q60776
+48366,Banbridge,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.35000000,-6.28333000,Banbridge,adm2,,,14744,Europe/London,Q58270
+48887,Castlewellan,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.25690000,-5.94446000,Castlewellan,city,,,2499,Europe/London,Q58126
+49178,Crossmaglen,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.08333000,-6.60000000,Crossmaglen,city,,,1415,Europe/London,Q1838543
+49642,Gilford,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.37256000,-6.36126000,Gilford,city,,,1583,Europe/London,Q2442269
+50145,Kilkeel,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.06196000,-6.00308000,Tale,city,,,6447,Europe/London,Q84109
+50707,Newcastle,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.21804000,-5.88979000,Newcastle,city,,,7444,Europe/London,Q1973774
+50725,Newry,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.17841000,-6.33739000,Newry,adm2,,,27757,Europe/London,Q269980
+50726,"Newry Mourne and Down",2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.23616000,-6.06687000,"Newry Mourne and Down",city,,,,Europe/London,Q269980
+51034,Rathfriland,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.25000000,-6.16667000,Rathfriland,city,,,2063,Europe/London,Q58090
+51113,Rostrevor,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.10000000,-6.20000000,Rostrevor,city,,,2515,Europe/London,Q58134
+51756,Warrenpoint,2534,NMD,"Newry Mourne and Down",232,GB,"United Kingdom",54.10148000,-6.25731000,Warrenpoint,city,,,6441,Europe/London,Q2224481
 48190,Acle,2473,NFK,Norfolk,232,GB,"United Kingdom",52.63681000,1.54757000,Acle,city,,,2788,Europe/London,Q341938
 48292,Ashill,2473,NFK,Norfolk,232,GB,"United Kingdom",52.60435000,0.78574000,Ashill,city,,,1172,Europe/London,Q943542
 48310,Attleborough,2473,NFK,Norfolk,232,GB,"United Kingdom",52.51779000,1.01572000,Attleborough,city,,,12163,Europe/London,Q1975526
@@ -136523,7 +136523,7 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 119386,Kapa‘a,1411,HI,Hawaii,233,US,"United States",22.07521000,-159.31895000,Dress,city,,,10699,Pacific/Honolulu,Q2981812
 119385,Kapaau,1411,HI,Hawaii,233,US,"United States",20.23389000,-155.80194000,Goose,city,,,1734,Pacific/Honolulu,Q2981812
 119388,Kapolei,1411,HI,Hawaii,233,US,"United States",21.33555000,-158.05820000,Kapohei,city,,,15186,Pacific/Honolulu,Q3110254
-119396,Kauai,1411,HI,Hawaii,233,US,"United States",22.01108000,-159.70544000,"Kauai County County,",county,,,73298,Pacific/Honolulu,Q111517
+119396,Kauai,1411,HI,Hawaii,233,US,"United States",22.01108000,-159.70544000,"Kauai County County",county,,,73298,Pacific/Honolulu,Q111517
 119400,Kaunakakai,1411,HI,Hawaii,233,US,"United States",21.09363000,-157.02613000,"Travel In Fours",city,,,3425,Pacific/Honolulu,Q744198
 119415,Kea‘au,1411,HI,Hawaii,233,US,"United States",19.62265000,-155.03744000,"Keau'a Hau",city,,,2253,Pacific/Honolulu,Q3316659
 119405,Kealakekua,1411,HI,Hawaii,233,US,"United States",19.52083000,-155.92250000,"That Great Stream",city,,,2019,Pacific/Honolulu,Q1847338
@@ -147947,7 +147947,7 @@ id,name,state_id,state_code,state_name,country_id,country_code,country_name,lati
 143129,"Maricao Municipio",1449,PR,"Puerto Rico",233,US,"United States",18.17301000,-66.94546000,"Maricao Municipio",city,,,,America/New_York,Q33692558
 143130,Martorell,1449,PR,"Puerto Rico",233,US,"United States",18.07472000,-65.89861000,Martorell,city,,,1868,America/New_York,Q13817223
 143131,Marueño,1449,PR,"Puerto Rico",233,US,"United States",18.05772000,-66.65603000,Marueño,city,,,936,America/New_York,Q35725607
-143132,Maunabo,1449,PR,"Puerto Rico",233,US,"United States",18.00719000,-65.89933000,"Maunaloa, settingment",city,,,10589,America/New_York,Q967149
+143132,Maunabo,1449,PR,"Puerto Rico",233,US,"United States",18.00719000,-65.89933000,"Maunaloa settingment",city,,,10589,America/New_York,Q967149
 143133,"Maunabo Municipio",1449,PR,"Puerto Rico",233,US,"United States",18.01691000,-65.92738000,"Maunabo Municipality",city,,,,America/New_York,Q33692875
 143134,Mayagüez,1449,PR,"Puerto Rico",233,US,"United States",18.20111111,-67.13972222,Mayagüez,city,,,73077,America/New_York,Q632727
 143135,Miranda,1449,PR,"Puerto Rico",233,US,"United States",18.38666667,-66.38388889,Miranda,city,,,1486,America/New_York,Q35730376
