@@ -20,6 +20,8 @@ namespace WeatherApp.Weather {
 		public float[] windSpeeds;
 		public static Dictionary<string, string> units;
 
+		private string cityName;
+
 		private ObservableCollection<HourlyWeather> _AllHourlyWeathers = new ObservableCollection<HourlyWeather>();
 		
 		// exposed fields
@@ -27,8 +29,9 @@ namespace WeatherApp.Weather {
 		public ObservableCollection<HalfDayWeather> todayResume { get; private set; } = new ObservableCollection<HalfDayWeather>();
 		public ObservableCollection<HalfDayWeather> tomorrowResume { get; private set; } = new ObservableCollection<HalfDayWeather>();
 		public ObservableCollection<HalfDayWeather> afterTomorrowResume { get; private set; } = new ObservableCollection<HalfDayWeather>();
+		public string title => $"Weather for {cityName}. Data from open-meteo.com."; 
 
-		public async static Task<Weather> getWeather(HttpClient client, City city) {
+		public async static Task<Weather> getWeather(HttpClient client, City.City city) {
 			string result;
 
 			// Create the HttpContent for the form to be posted.
@@ -58,19 +61,13 @@ namespace WeatherApp.Weather {
 			Weather weather = rawWeather.toWeather();
 			Debug.WriteLine("Read Content.");
 
+			weather.cityName = city.full_name;
 			weather.addAll();
 			weather.addHalfResume();
+			weather.trimFarFuture();
 			weather.removePast();
 
 			return weather;
-		}
-
-		public string getTime(int index) {
-			if (index < 0 || index >= length)
-				return "";
-
-			DateTime date = time[index];
-			return $"{date.Hour}:{date.Minute}";
 		}
 
 		private void addHourlyWeather(int index) {
@@ -97,6 +94,16 @@ namespace WeatherApp.Weather {
 					i--;
 				} else {
 					break;
+				}
+			}
+		}
+
+		public void trimFarFuture() {
+			for (int i = 72; i < _AllHourlyWeathers.Count; i++) {
+				HourlyWeather w = _AllHourlyWeathers[i];
+				if (w.time.Hour % 6 != 0) {
+					_AllHourlyWeathers.RemoveAt(i);
+					i--;
 				}
 			}
 		}

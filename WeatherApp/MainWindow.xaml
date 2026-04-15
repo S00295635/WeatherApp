@@ -5,53 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        xmlns:ssoft='clr-namespace:SaeediSoftWpfUiControls;assembly=SaeediSoftWpfUiControls'
         xmlns:local="clr-namespace:WeatherApp"
         xmlns:controls="clr-namespace:System.Windows.Controls;assembly=DotNetProjects.Input.Toolkit"
                  mc:Ignorable="d"
         ResizeMode="CanResizeWithGrip"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Width="800" Height="450" 
-        Background="LightSteelBlue" KeyDown="Window_KeyDown">
+        Title="MainWindow" Width="1080" Height="720" KeyDown="Window_KeyDown">
     <Window.Resources>
         <DataTemplate x:Key="HourlyTemplate">
-            <Grid HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="60">
-                <TextBlock Background="Black" Width="2" Height="94" Margin="0,0,58,0" Opacity="{Binding opacity}"/>
-                <TextBlock Text="{Binding timeString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center" FontFamily="Comic Sans MS" Margin="3,0,0,0"/>
-                <Image Source="{Binding image}" Height="33" Margin="3,16,0,0" VerticalAlignment="Top"/>
-                <TextBlock Text="{Binding temperatureString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center" Margin="3,49,0,0" FontFamily="Comic Sans MS"/>
-                <TextBlock Text="{Binding windString}" HorizontalAlignment="Center" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextAlignment="Center" Margin="3,62,0,0" FontFamily="Comic Sans MS"/>
-            </Grid>
+            <Border x:Name="HourlyBorder" CornerRadius="5,5,5,5" Background="#59000000">
+                <Grid HorizontalAlignment="Left" Height="125" VerticalAlignment="Center" Width="80">
+                    <TextBlock Background="White" Width="2" Height="{Binding Height, ElementName=HourlyBorder}" Margin="0,0,76,0" Opacity="{Binding opacity}"/>
+                    <TextBlock Text="{Binding timeString}" HorizontalAlignment="Center" FontSize="16" Height="18" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" TextAlignment="Center" FontFamily="Comic Sans MS" Margin="3,0,0,0" FontWeight="Normal" Foreground="White"/>
+                    <Image Source="{Binding image}" Height="50" Margin="3,25,0,0" VerticalAlignment="Top"/>
+                    <TextBlock Text="{Binding temperatureString}" HorizontalAlignment="Center" FontSize="16" Height="18" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" TextAlignment="Center" Margin="3,75,0,0" FontFamily="Comic Sans MS" Foreground="White"/>
+                    <TextBlock Text="{Binding windString}" HorizontalAlignment="Center" FontSize="16" Height="18" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" TextAlignment="Center" Margin="3,93,0,0" FontFamily="Comic Sans MS" Foreground="White"/>
+                </Grid>
+            </Border>
         </DataTemplate>
         <DataTemplate x:Key="halfDayTemplate">
-            <Grid>
-                <Image x:Name="MorningImage" Source="{Binding image}" Margin="5,5,0,0" HorizontalAlignment="Left" Width="72" Height="68" VerticalAlignment="Top"/>
-                <TextBlock Margin="4,82,0,0" TextWrapping="Wrap" Text="{Binding minTempStr}" HorizontalAlignment="Left" Width="72" Height="13" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
-                <TextBlock Margin="4,98,0,0" TextWrapping="Wrap" Text="{Binding maxTempStr}" HorizontalAlignment="Left" Width="72" Height="13" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
-            </Grid>
+            <Border  Background="#59000000" BorderThickness="1,1,1,1" CornerRadius="10,10,10,10">
+                <Grid>
+                    <Image Stretch="UniformToFill" x:Name="MorningImage" Source="{Binding image}" Margin="5,5,0,0" HorizontalAlignment="Left" Width="60" Height="60" VerticalAlignment="Top"/>
+                    <TextBlock Margin="4,70,0,0"  Text="{Binding minTempStr}"    HorizontalAlignment="Left" Width="60" Height="16" VerticalAlignment="Top" FontFamily="Comic Sans MS" TextWrapping="Wrap" Foreground="White"/>
+                    <TextBlock Margin="4,86,0,0"  Text="{Binding maxTempStr}"    HorizontalAlignment="Left" Width="60" Height="16" VerticalAlignment="Top" FontFamily="Comic Sans MS" TextWrapping="Wrap" Foreground="White"/>
+                    <TextBlock Margin="4,102,0,0" Text="{Binding rainStr}"       HorizontalAlignment="Left" Width="60" Height="16" VerticalAlignment="Top" FontFamily="Comic Sans MS" TextWrapping="Wrap" Foreground="White"/>
+                    <TextBlock Margin="4,118,0,0" Text="{Binding meanRainPbStr}" HorizontalAlignment="Left" Width="60" Height="16" VerticalAlignment="Top" FontFamily="Comic Sans MS" TextWrapping="Wrap" Foreground="White"/>
+                </Grid>
+            </Border>
         </DataTemplate>
     </Window.Resources>
-    
-    <Viewbox Stretch="Fill">
-        <Grid ScrollViewer.CanContentScroll="True" Width="800" Height="450">
-            <!-- Background Image -->
-            <Image Source="/Content/Background.jpg" Width="800" Height="450" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill" />
+    <Window.Background>
+        <ImageBrush ImageSource="/Content/Background.jpg" TileMode="None"/>
+    </Window.Background>
 
+    <Viewbox Stretch="UniformToFill">
+        <Grid ScrollViewer.CanContentScroll="True" Width="1080" Height="720">
             <!-- Search Bar -->
             <controls:AutoCompleteBox Grid.ColumnSpan="2" 
                                       Margin="114,5,114,0" 
                                       RenderTransformOrigin="0.5,0.5" 
                                       Height="25" 
                                       VerticalAlignment="Top"
-                                      x:Name="SearchBar" SelectionChanged="SearchBar_SelectionChanged"
-                                      FontFamily="Comic Sans MS"
-                                      >
-            </controls:AutoCompleteBox>
+                                      x:Name="SearchBar"
+                                      SelectionChanged="SearchBar_SelectionChanged"
+                                      FontFamily="Comic Sans MS"/>
+
+            <!-- Title -->
+            <TextBlock Text="{Binding title}" Foreground="White" FontSize="20" FontFamily="Comic Sans MS" HorizontalAlignment="Center" VerticalAlignment="Top" Height="33" Width="546" Margin="0,53,0,0" TextAlignment="Center"/>
 
             <!-- Half Day Resumes -->
             <!-- Today -->
-            <Grid Margin="100,75,0,0" Height="163" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150">
-                <TextBlock Text="Today: " Height="25" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="White"/>
+            <Grid x:Name="HalfMain" Margin="114,156,0,0" Height="170" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150">
+                <TextBlock Text="Today: " TextAlignment="Center" Height="25" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="16" Foreground="White"/>
                 <ItemsControl Margin="0,25,0,0" ItemsSource="{Binding todayResume}" ItemTemplate="{StaticResource halfDayTemplate}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -60,10 +66,10 @@
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
             </Grid>
-            
+
             <!-- Tomorrow -->
-            <Grid Margin="325,75,0,0" Height="163" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150">
-                <TextBlock Text="Tomorrow: " Height="25" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="White"/>
+            <Grid Margin="0,156,0,0" Height="{Binding Height, ElementName=HalfMain}" VerticalAlignment="Top" HorizontalAlignment="Center" Width="{Binding Width, ElementName=HalfMain}">
+                <TextBlock Text="Tomorrow: " TextAlignment="Center" Height="25" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="16" Foreground="White"/>
                 <ItemsControl Margin="0,25,0,0" ItemsSource="{Binding tomorrowResume}" ItemTemplate="{StaticResource halfDayTemplate}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -74,8 +80,8 @@
             </Grid>
 
             <!-- After Tomorrow -->
-            <Grid Margin="550,75,0,0" Height="163" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150">
-                <TextBlock Text="In 2 days:" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="White"/>
+            <Grid Margin="816,156,0,0" Height="{Binding Height, ElementName=HalfMain}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="{Binding Width, ElementName=HalfMain}">
+                <TextBlock Text="In 2 days:" TextAlignment="Center" Height="25" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="16" Foreground="White"/>
                 <ItemsControl Margin="0,25,0,0" ItemsSource="{Binding afterTomorrowResume}" ItemTemplate="{StaticResource halfDayTemplate}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -86,15 +92,28 @@
             </Grid>
 
             <!-- Hour by Hour Forecast -->
-            <ScrollViewer Margin="47,250,47,0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" Height="131" VerticalAlignment="Top">
-                <ItemsControl ItemsSource="{Binding AllHourlyWeathers}" ItemTemplate="{StaticResource HourlyTemplate}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel Orientation="Horizontal"/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
-            </ScrollViewer>
+            <Grid Margin="10,400,47,0" Height="130">
+                <TextBlock Width="110" HorizontalAlignment="Left" FontFamily="Comic Sans MS" FontSize="17" Foreground="White" TextAlignment="Right">
+                    Hour  
+                    <LineBreak/>
+                    Image  
+                    <LineBreak/>
+                    <LineBreak/>
+                    Temperature  
+                    <LineBreak/>
+                    Wind Speeds  
+                    <LineBreak/>
+                </TextBlock>
+                <ScrollViewer Margin="100,0,0,0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" VerticalAlignment="Top">
+                    <ItemsControl ItemsSource="{Binding AllHourlyWeathers}" ItemTemplate="{StaticResource HourlyTemplate}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
         </Grid>
     </Viewbox>
 

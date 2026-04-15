@@ -10,66 +10,25 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using WeatherApp.Weather;
+using WeatherApp.City;
 
 namespace WeatherApp {
-	[IgnoreFirst]
-	[DelimitedRecord(",")]
-	public class RawCity {
-		public int id;
-		public string name;
-		public int state_id;
-		public string state_code;
-		public string state_nane;
-		public int country_id;
-		public string country_code;
-		public string country_name;
-		public float latitude;
-		public float longitude;
-		public string native;
-		public string type;
-		public string level;
-		public int? parent_id;
-		public int? population;
-		public string timezone;
-		public string wikiId;
 
-		public City toCity() {
-			return new City(id, name, country_name, latitude, longitude);
-		}
-	}
 
-	public class City {
-		public int id;
-		public string name;
-		public string country_name;
-		public string full_name => $"{name}, {country_name}";
-		public float latitude;
-		public float longitude;
-
-		public City(int id, string name, string country_name, float latitude, float longitude) {
-			this.id = id;
-			this.name = name;
-			this.country_name = country_name;
-			this.latitude = latitude;
-			this.longitude = longitude;
-		}
-
-		public override string ToString() => full_name;
-	}
+	
 
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
 	public partial class MainWindow : Window {
 		public static CultureInfo cultureInfo = new CultureInfo("en-IE"); // because my pc is french so it causes errors while parsing (the decimal separator is a , in french not a .)
-		public static City sligo = new City(57400, "Sligo", "Ireland", 54.25000000f, -8.66667000f);
+		public static City.City sligo = new City.City(57400, "Sligo", "Ireland", 54.25000000f, -8.66667000f);
 
 		public static Dictionary<string, ImageSource> imageDict = new Dictionary<string, ImageSource>
 		{
-			{ "suny", new BitmapImage(new Uri($"Content/sunny.png", UriKind.Relative))},
-			{ "cloudy", new BitmapImage(new Uri($"Content/cloudy.png", UriKind.Relative))},
-			{ "rainy", new BitmapImage(new Uri($"Content/rainy.png", UriKind.Relative))},
+			{ "suny", new BitmapImage(new Uri($"Content/sun.png", UriKind.Relative))},
+			{ "cloudy", new BitmapImage(new Uri($"Content/cloud.png", UriKind.Relative))},
+			{ "rainy", new BitmapImage(new Uri($"Content/rain.png", UriKind.Relative))},
 		};
 
 		private HttpClient client = new HttpClient();
@@ -80,17 +39,18 @@ namespace WeatherApp {
 			DataContext = GetWeatherOf(sligo);
 
 			SearchBar.ItemsSource = GetCities();
+			SearchBar.Placeholder = sligo;
 		}
 
 		// Helper Functions
-		private IEnumerable<City> GetCities() {
+		private IEnumerable<City.City> GetCities() {
 			var engine = new FileHelperEngine<RawCity>();
 			var rawCities = engine.ReadFile("Content/cities.csv");
-			IEnumerable<City> cities = rawCities.Select(c => c.toCity());
-			return cities.Where(c => c.country_name != "Ireland");
+			IEnumerable<City.City> cities = rawCities.Select(c => c.toCity());
+			return cities.Where(c => c.country_name == "Ireland");
 		}
 
-		private Weather.Weather GetWeatherOf(City city) {
+		private Weather.Weather GetWeatherOf(City.City city) {
 			var task = Task.Run(async () => await Weather.Weather.getWeather(client, city)); // runs an async task in a sync function
 			task.Wait();
 			return task.Result;
@@ -111,12 +71,13 @@ namespace WeatherApp {
 
 		private void SearchBar_SelectionChanged(object sender, SelectionChangedEventArgs e) {
 			AutoCompleteBox box = (AutoCompleteBox)sender;
-			City selected_city = box.SelectedItem as City;
+			City.City selected_city = box.SelectedItem as City.City;
 			if (selected_city != null) {
 				DataContext = GetWeatherOf(selected_city);
+				box.Placeholder = selected_city;
+				box.SelectedItem = null;
+				box.Text = string.Empty;
 			}
 		}
 	}
-
-
 }
